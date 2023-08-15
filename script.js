@@ -74,6 +74,9 @@ let func_tick_play = function(){
     rain_video.pause();
     rain_video.currentTime = 0;
 }
+home_btn.addEventListener('click',function() {
+    location.reload();
+})
 rain_btn.addEventListener('click',func_rain_play);
 beach_btn.addEventListener('click',func_beach_play);
 tick_play_btn.addEventListener('click',func_tick_play);
