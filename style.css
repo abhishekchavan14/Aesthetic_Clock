@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1%; */
+    background-color: rgb(34, 34, 34);
+    color: white;
+    opacity: 80%;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    /* border: solid red; */
+    
+}
+#nav_1 li{
+    margin-right: 15px;
+    transition: scale 0.3s;
+}
+#nav_2 li{
+    transition: scale 0.3s;
+    cursor: pointer;
+}
+#nav_1 button{
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+nav li:hover{
+    scale: 1.1;
+    text-decoration: underline;
+    color: rgb(170, 170, 170);
+}
+
+
+#clock_container {
+    width: 45%;
+    height: 45%;
+    /* border: solid red; */
+    position: relative;
+    display: flex;
+    margin: auto;
+}
+
+#clock_img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: relative;
+}
+#clock_container .hands{
+    transform-origin: bottom;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 1;
+    position: absolute;
+}
+#clock_container #hour {
+    width: 0.8%;
+    height: 10%;
+    right: 49.7%;
+    top: 40%;
+}
+
+#clock_container #minute {
+    width: 0.5%;
+    height: 13%;
+    right: 49.8%;
+    top: 37%;
+}
+
+#clock_container #second {
+    width: 0.2%;
+    height: 17%;
+    right: 49.9%;
+    top: 33%;
+    background-color: red;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    background-color: transparent;
+}
+footer #copyright{
+    position: absolute;
+    justify-self: flex-start;
+}
+footer #contact{
+    position: absolute;
+    margin-right: 15px;
+}
+footer img{
+    height: 1.5%;
+    width: 1.5%;
+    margin: 10px;
+}
+
+video{
+    z-index: -100;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    opacity: 90%;
+    min-width: 100%;
+    min-height: 100%;
+    display: none;
+}
+
+@media (max-width:769px){
+    #home_btn, #rain_btn, #beach_btn{
+        display: none;
+    }
+    #footer{
+        flex-wrap: wrap;
+    }
+}
