@@ -35,21 +35,21 @@ let func_rain_play = function(){
     beach_audio.currentTime = 0;
 
     document.getElementById("nav").style.opacity = "20%";
-    document.getElementById("clock_img").style.opacity = "20%";
-    document.getElementById("clock_container").style.opacity = "20%";
+    document.getElementById("clock_img").style.opacity = "30%";
+    document.getElementById("clock_container").style.opacity = "100%";
     document.getElementById("footer").style.opacity = "0%";
 }
 let func_beach_play = function(){
     beach_video.style.display = "block";
     beach_video.play();
     beach_audio.play();
-
+    beach_audio.volume = 0.3;
     rain_video.style.display = "none";
     rain_video.pause();
     rain_video.currentTime = 0;
     document.getElementById("nav").style.opacity = "20%";
-    document.getElementById("clock_img").style.opacity = "20%";
-    document.getElementById("clock_container").style.opacity = "20%";
+    document.getElementById("clock_img").style.opacity = "30%";
+    document.getElementById("clock_container").style.opacity = "100%";
     document.getElementById("footer").style.opacity = "0%";
 }
 

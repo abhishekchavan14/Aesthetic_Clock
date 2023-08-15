@@ -1,15 +1,16 @@
 body{
     margin: 0;
-    font-family: Helvetica, sans-serif;
+    font-family:Helvetica, sans-serif;
+    background-color: rgb(128, 211, 207);
 }
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     /* padding: 1%; */
-    background-color: rgb(34, 34, 34);
+    background-color: rgb(92, 92, 92);
     color: white;
-    opacity: 80%;
+    opacity: 70%;
 }
 ul{
     display: flex;
@@ -18,16 +19,24 @@ ul{
     list-style: none;
     padding: 10px;
     margin: 0;
-    /* border: solid red; */
     
 }
 #nav_1 li{
     margin-right: 15px;
     transition: scale 0.3s;
 }
+#nav_1 li button{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 #nav_2 li{
     transition: scale 0.3s;
     cursor: pointer;
+}
+#nav_2 li img{
+    transition: scale 0.3s;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
 }
 #nav_1 button{
     color: white;
@@ -35,10 +44,13 @@ ul{
     border: none;
     cursor: pointer;
 }
-nav li:hover{
-    scale: 1.1;
-    text-decoration: underline;
-    color: rgb(170, 170, 170);
+#nav_1 li:hover{
+    scale:1.3;
+}
+nav li img:hover{
+    box-shadow: white 0px 0px 5px;
+    scale: 1.5;
+    border-radius: 10px;
 }
 
 
@@ -88,26 +100,15 @@ nav li:hover{
 }
 footer{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: 0;
+    bottom: 2px;
     width: 100%;
     height: 5vh;
     background-color: transparent;
-}
-footer #copyright{
-    position: absolute;
-    justify-self: flex-start;
-}
-footer #contact{
-    position: absolute;
-    margin-right: 15px;
-}
-footer img{
-    height: 1.5%;
-    width: 1.5%;
-    margin: 10px;
+    font-size: small;
 }
 
 video{
@@ -120,12 +121,53 @@ video{
     min-height: 100%;
     display: none;
 }
+#landscape{
+    display: none;
+}
 
+@keyframes fade-out {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
 @media (max-width:769px){
-    #home_btn, #rain_btn, #beach_btn{
+    #footer{
+        flex-wrap: wrap;
+    }
+    video{
+        position: absolute;
+        transform: rotate(90deg);
+        width: 100vh;
+        height: 100vw;
+        object-fit: cover;
+        z-index: -100;
+        visibility: visible;
+        justify-self: center;
+    }
+    #landscape{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation: fade-out 15s;
+        animation-fill-mode: forwards;
+    }
+}
+@media (orientation:landscape){
+    #landscape{
         display: none;
     }
-    #footer{
+}
+@media (max-width:580px){
+    nav{
+        flex-wrap: wrap;
+    }
+}
+@media(max-width:300px){
+    nav #nav_1{
         flex-wrap: wrap;
     }
 }
