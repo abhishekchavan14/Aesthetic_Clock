@@ -17,7 +17,7 @@ let home_btn = document.getElementById("home_btn");
 let rain_btn = document.getElementById("rain_btn");
 let beach_btn = document.getElementById("beach_btn");
 let tick_play_btn = document.getElementById("tick_play_btn");
-let tick_pause_btn = document.getElementById("tick_pause_btn");
+// let tick_pause_btn = document.getElementById("tick_pause_btn");
 
 let rain_video = document.getElementById("myrainVideo");
 let beach_video = document.getElementById("mybeachVideo");
@@ -55,11 +55,16 @@ let func_beach_play = function(){
 
 let func_tick_play = function(){
     tick_audio.play();
-}
-let func_tick_pause = function(){
-    tick_audio.pause();
-}
-let func_home = function(){
+    document.body.style.backgroundColor = "black";
+    document.getElementById("footer").style.visibility = "hidden";
+    rain_btn.style.visibility = "hidden";
+    beach_btn.style.visibility = "hidden";
+    tick_play_btn.style.visibility = "hidden";
+    document.getElementById("nav_2").style.visibility="hidden";
+    document.getElementById("hour").style.backgroundColor="white";
+    document.getElementById("minute").style.backgroundColor="white";
+    home_btn.style.color="white";
+    home_btn.style.opacity="100%";
     beach_video.style.display = "none";
     beach_video.pause();
     beach_video.currentTime = 0;
@@ -68,14 +73,8 @@ let func_home = function(){
     rain_video.style.display = "none";
     rain_video.pause();
     rain_video.currentTime = 0;
-    tick_audio.pause();
-    document.getElementById("nav").style.opacity = "100%";
-    document.getElementById("clock_img").style.opacity = "100%";
-    document.getElementById("clock_container").style.opacity = "100%";
-    document.getElementById("footer").style.opacity = "100%";
 }
 rain_btn.addEventListener('click',func_rain_play);
 beach_btn.addEventListener('click',func_beach_play);
 tick_play_btn.addEventListener('click',func_tick_play);
-tick_pause_btn.addEventListener('click',func_tick_pause);
 home_btn.addEventListener('click',func_home);
