@@ -155,6 +155,8 @@ video{
 @media (max-width:780px){
     #footer{
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
     video{
         position: absolute;
