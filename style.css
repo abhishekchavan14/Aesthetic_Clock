@@ -176,9 +176,9 @@ video{
         animation: fade-out 15s;
         animation-fill-mode: forwards;
     }
-    body{
+    /* body{
         overflow-y: hidden;
-    }
+    } */
 }
 @media (orientation:landscape){
     #landscape{
