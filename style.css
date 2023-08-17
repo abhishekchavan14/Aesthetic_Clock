@@ -152,7 +152,7 @@ video{
         -webkit-filter: drop-shadow(15px 5px 50px #8fe7ff7b);
     }
 }
-@media (max-width:769px){
+@media (max-width:780px){
     #footer{
         flex-wrap: wrap;
     }
