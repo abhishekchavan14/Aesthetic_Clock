@@ -158,10 +158,10 @@ video{
     }
     video{
         position: absolute;
-        transform: rotate(90deg);
+        /* transform: rotate(90deg); */
         width: 100vh;
         height: 100vw;
-        object-fit: cover;
+        object-fit:cover;
         z-index: -100;
         visibility: visible;
         justify-self: center;
@@ -173,6 +173,9 @@ video{
         align-items: center;
         animation: fade-out 15s;
         animation-fill-mode: forwards;
+    }
+    body{
+        overflow-y: hidden;
     }
 }
 @media (orientation:landscape){
